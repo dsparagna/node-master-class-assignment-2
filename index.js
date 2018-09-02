@@ -86,17 +86,19 @@ app.server = http.createServer((req, res) => {
 });
 
 // Start the server
-app.server.listen( config.port , () => {
-    console.log('The server is up and running now');
+app.server.listen(config.port , () => {
+    console.log("The server is up and running now and on port: "+config.port+" in "+config.envName+" mode" );
 });
 
 // Handlers
 handle.message;
 handle.home;
 handle.notFound;
+handle.ping;
 
 // Define the request router
 var router = {
     'hello': handle.message,
-    'home': handle.home
+    'home': handle.home,
+    'ping': handle.ping
 };

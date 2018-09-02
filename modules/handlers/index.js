@@ -16,4 +16,9 @@ handlers.notFound = (data, callback) => {
     callback(404, { 'message': 'Page Not Found' });
 };
 
+// Message handler
+handlers.ping = (data, callback) => {
+    callback(200);
+};
+
 module.exports = handlers;
