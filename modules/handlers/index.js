@@ -3,12 +3,12 @@ var handlers = {};
 
 // Message handler
 handlers.message = (data, callback) => {
-    callback(406, { 'message': 'Hello and welcome to this application!' });
+    callback(200, { 'message': 'Hello and welcome to this application!' });
 };
 
 // Home handler
 handlers.home = (data, callback) => {
-    callback(406, { 'message': 'Home' });
+    callback(200, { 'message': 'Home' });
 };
 
 // Not found handler
