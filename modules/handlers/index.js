@@ -1,4 +1,4 @@
-// Define all the handlers
+// These are the request handlers
 var handlers = {};
 
 // Message handler

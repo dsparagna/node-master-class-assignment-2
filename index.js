@@ -10,10 +10,24 @@ const url = require('url');
 const StringDecoder = require('string_decoder').StringDecoder;
 const handle = require('./modules/handlers');
 const config = require('./modules/config');
+const _data = require('./modules/data-files');
+
+/*
+_data.create('test','newfile', {'foo': 'bar'}, (err)=> {
+    console.log('this was the errro', err);
+});
+*/
+
+_data.read('test','newfile', (err,data)=> {
+    console.log('this was the err', err);
+    console.log('this was the data', data);
+});
+
 
 /*
 * Set up app object
 */
+
 let app = {};   
 
 /*
